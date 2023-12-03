@@ -1,0 +1,155 @@
+/* 
+File: style.css
+GUI Assignment: Creating an Interactive Dynamic Table
+Michael Chagnon, UMass Lowell Computer Science,
+michael_chagnon@student.uml.edu
+Copyright (c) 2021 by Michael. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created by MC on November 20, 2023
+Description: A website that will dynamicallly create a multiplication table 
+with row and column values between -50 and 50 using jquery sliders and validation.
+Website also has tabs to store previous tables created and deletion of them.
+*/
+body {
+  background-color: #e1b382;
+}
+
+form {
+  margin-top: 50px;
+}
+
+h1 {
+  /*Style for main page header*/
+  color: #2d545e;
+  background-color: #c89666;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+input {
+  /*Style for input boxes*/
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 3px;
+  background-color: #c89666;
+  width: 190px;
+}
+
+::placeholder {
+  /*Style for text in input boxes*/
+  color: #2d545e;
+  font-weight: bold;
+}
+
+label {
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+button {
+  /*Style and position for submit button*/
+  color: #2d545e;
+  background-color: #c89666;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#table {
+  /*Overflow is used to make table scrollable*/
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+  max-width: 700px;
+}
+
+table {
+  /*Style and position for table*/
+  position: absolute;
+  margin-left: 700px;
+  margin-top: -530px;
+  border: 2px solid;
+  background-color: #000000;
+}
+
+td {
+  /*Style for cells in table*/
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 150px;
+  font-size: larger;
+  font-weight: bold;
+  border: 2px solid;
+  border-color: #000000;
+  background-color: #c89666;
+  color: #2d545e;
+}
+
+th {
+  /*Style for header row and column cells in table*/
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  width: 150px;
+  min-width: 50px;
+  font-size: larger;
+  font-weight: bold;
+  border: 2px solid;
+  border-color: #000000;
+  background-color: #ef8c2f;
+  color: #2d545e;
+
+  position: sticky; /*This is used to get the headers to be fixed*/
+  top: 0;
+  left: 0;
+}
+
+td:nth-child(odd) {
+  /*Makes everyother column different color*/
+  background-color: #c78444;
+  color: #2d545e;
+}
+
+p {
+  /*Style and position for errors*/
+  width: 210px;
+  color: red;
+}
+
+.error {
+  /*Makes errors red*/
+  color: red;
+}
+
+form div {
+  /*Determines width of form for inputs*/
+  width: 200px;
+}
+
+#display {
+  /*Used for display of multiplication table*/
+  float: right;
+}
+
+#tabs div {
+  /*Used to format tables inside of tabs*/
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+  max-width: 700px;
+}
+
+#tabs li .ui-icon-close {
+  /*Used to format 'x' icon on tabs*/
+  float: left;
+  margin: 0.4em 0.2em 0 0;
+  cursor: pointer;
+}
+
+#tabs input {
+  /*Used to format check boxes to delete multiple tabs*/
+  width: 20px;
+}

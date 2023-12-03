@@ -1,0 +1,64 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Michael Chagnon, UMass Lowell Computer Science,
+michael_chagnon@student.uml.edu
+Copyright (c) 2021 by Michael. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created by MC on November 20, 2023
+Description: A website that will dynamicallly create a multiplication table 
+with row and column values between -50 and 50 using jquery sliders and validation.
+Website also has tabs to store previous tables created and deletion of them.
+-->
+<!DOCTYPE html>
+  <head>
+    <title>Dynamic Table</title>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+  </head>
+  <body>
+    <h1>Dynamic Multiplication Table</h1>
+    <div id="display">
+      <div id="table"></div>
+    </div>
+    <form id="formValidation" name="formValidation">
+      <label>Minimum Column Value: </label> <br />
+      <input type="number" id="minCol" name="minCol" value=0><br /><br />
+      <div id="minColSlider" name="minCol"></div><br /><br />
+
+      <label>Maximum Column Value: </label> <br />
+      <input type="number" id="maxCol" name="maxCol" value=0><br /><br />
+      <div id="maxColSlider" name="maxCol"></div><br /><br />
+
+      <label>Minimum Row Value: </label> <br />
+      <input type="number" id="minRow" name="minRow" value=0><br /><br />
+      <div id="minRowSlider" name="minRow"></div><br /><br />
+
+      <label>Maximum Row Value: </label> <br />
+      <input type="number" id="maxRow" name="maxRow" value=0><br /><br />
+      <div id="maxRowSlider" name="maxRow"></div><br /><br />
+
+      
+
+      <button id="submit" type="submit">Submit</button>
+      <button id='add-tab'>Add Tab</button>
+      <button type="button" id="remove">Remove Tab</button>
+    </form>
+
+    <div id='tabs'>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
