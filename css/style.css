@@ -11,19 +11,35 @@ with row and column values between -50 and 50 using jquery sliders and validatio
 Website also has tabs to store previous tables created and deletion of them.
 */
 body {
-  background-color: #e1b382;
+  background-color: #111111;
+  background-image: url("../images/background.png");
 }
 
 form {
+  background: rgba(250, 250, 250, 0.2);
+  padding-left: 10px;
+  margin-bottom: 2rem;
+  width: 15%;
   margin-top: 50px;
+}
+
+#minColSlider .ui-slider-handle {
+  outline: 0;
+  background: black;
+  border-radius: 50%;
+}
+#minColSlider .ui-slider-range{
+  background-color: #000000;
 }
 
 h1 {
   /*Style for main page header*/
-  color: #2d545e;
-  background-color: #c89666;
+  border-radius: 25px;
+  color: #FFFFFFFF;
+  background: rgba(250, 250, 250, 0.2);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   text-align: center;
-  text-decoration: underline;
   text-transform: uppercase;
   padding: 10px;
   letter-spacing: 5px;
@@ -48,6 +64,7 @@ input {
 
 label {
   font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  color: #FFFFFFFF;
 }
 
 button {
